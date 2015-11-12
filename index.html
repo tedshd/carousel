@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Carousel</title>
+<link href="" rel="stylesheet">
+<style>
+	ul, li {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	p {
+		margin: 0;
+		padding: 0;
+	}
+	.clearfix {
+	    *zoom: 1;
+	}
+	.clearfix:after {
+	    display: table;
+	    content: "";
+	    line-height: 0;
+	    clear: both;
+	}
+	.divider:after {
+		content: "";
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		width: 0;
+		height: 95%;
+    	margin: auto;
+		border-left: solid 1px #aaa;
+	}
+	.carousel {
+		position: relative;
+		width: 100%;
+		height: 300px;
+		padding: 0 10px;
+		border: solid 1px #aaa;
+		box-sizing: border-box;
+		overflow: hidden;
+	}
+	.carousel+div .dot {
+	    display: inline-block;
+	    width: 20px;
+	    height: 20px;
+        margin: 3px;
+	    background: #aaa;
+	    border-radius: 10px;
+	    cursor: pointer;
+	}
+	.carousel+div .dot.focus {
+	    background: #0088ff;
+	}
+	.carousel .arrow-l {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		width: 30px;
+		height: 80px;
+		margin: auto;
+		background: #aaa;
+	}
+	.carousel .arrow-r {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		width: 30px;
+		height: 80px;
+		margin: auto;
+		background: #aaa;
+	}
+	.carousel-container {
+	    position: relative;
+		width: 100%;
+		height: 100%;
+		box-sizing: border-box;
+	}
+	.product-interest {
+		position: absolute;
+	    left: 0;
+	    top: 0;
+		box-sizing: border-box;
+		height: 300px;
+		width: 2400px;
+		transition: left 1s;
+	}
+	.product-interest li {
+		position: relative;
+		float: left;
+		width: 240px;
+		height: 100%;
+	}
+	.product-interest li a {
+		display: inline-block;
+		padding: 10px 0;
+		width: 100%;
+		height: 100%;
+		box-sizing: border-box;
+	}
+	.product-interest .product-img {
+		display: block;
+		margin: 0 auto;
+		width: 180px;
+		height: 180px;
+	}
+	.product-interest p {
+	    margin: 0 30px;
+        word-wrap: break-word;
+	}
+	.product-interest .product-title {}
+	.product-interest .product-price {}
+	.product-interest .product-mall {}
+</style>
+</head>
+<body>
+    <div id="product-interest-carousel">
+    	<div class="carousel">
+	    	<div class="carousel-container">
+		    	<ul class="product-interest clearfix">
+		    		<li class="divider">
+		    			<a href="" target="_blank">
+			    			<img class="product-img" src="" alt="">
+			    			<p class="product-title">title</p>
+			    			<p class="product-price">1200</p>
+			    			<p class="product-mall">Yahoo</p>
+		    			</a>
+		    		</li>
+		    		<li class="divider">
+		    			<a href="" target="_blank">
+			    			<img class="product-img" src="" alt="">
+			    			<p class="product-title">long title haha this is test</p>
+			    			<p class="product-price">1200</p>
+			    			<p class="product-mall">Yahoo</p>
+		    			</a>
+		    		</li>
+		    		<li class="divider">
+		    			<a href="" target="_blank">
+			    			<img class="product-img" src="" alt="">
+			    			<p class="product-title">long title haha this is test</p>
+			    			<p class="product-price">1200</p>
+			    			<p class="product-mall">Yahoo</p>
+		    			</a>
+		    		</li>
+		    		<li class="divider">
+		    			<a href="" target="_blank">
+			    			<img class="product-img" src="" alt="">
+			    			<p class="product-title">long title haha this is test</p>
+			    			<p class="product-price">1200</p>
+			    			<p class="product-mall">Yahoo</p>
+		    			</a>
+		    		</li>
+		    		<li class="divider">
+		    			<a href="" target="_blank">
+			    			<img class="product-img" src="" alt="">
+			    			<p class="product-title">long title haha this is test</p>
+			    			<p class="product-price">1200</p>
+			    			<p class="product-mall">Yahoo</p>
+		    			</a>
+		    		</li>
+		    		<li class="divider">
+		    			<a href="" target="_blank">
+			    			<img class="product-img" src="" alt="">
+			    			<p class="product-title">long title haha this is test</p>
+			    			<p class="product-price">1200</p>
+			    			<p class="product-mall">Yahoo</p>
+		    			</a>
+		    		</li>
+		    		<li class="">
+		    			<a href="" target="_blank">
+			    			<img class="product-img" src="" alt="">
+			    			<p class="product-title">titletitletitletitletitletitletitle</p>
+			    			<p class="product-price">1200</p>
+			    			<p class="product-mall">Yahoo</p>
+		    			</a>
+		    		</li>
+		    	</ul>
+	    	</div>
+	    	<div class="arrow-l"></div>
+	    	<div class="arrow-r"></div>
+    	</div>
+    </div>
+</body>
+<script src="javascript/carousel.js"></script>
+<script>
+	var carousel = new carousel({
+		dom: document.getElementById('product-interest-carousel'),
+		viewCount: 3
+	});
+</script>
+</html>
