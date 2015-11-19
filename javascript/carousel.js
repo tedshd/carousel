@@ -7,14 +7,16 @@
 (function () {
 	function carousel (option) {
 		if (!option) {
-			if (!option.dom) {
-				console.error('not set dom');
-				return;
-			}
-			if (!option.viewCount) {
-				console.error('not set viewCount');
-				return;
-			}
+			console.error('not option');
+			return;
+		}
+		if (!option.dom) {
+			console.error('not set dom');
+			return;
+		}
+		if (!option.viewCount) {
+			console.error('not set viewCount');
+			return;
 		}
 		var dot,
 			dom = option.dom,
