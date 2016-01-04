@@ -6,99 +6,20 @@
 <title>Carousel</title>
 <link href="" rel="stylesheet">
 <style>
-	ul, li {
-		margin: 0;
-		padding: 0;
-		list-style: none;
-	}
-	p {
-		margin: 0;
-		padding: 0;
-	}
-	.clearfix {
-	    *zoom: 1;
-	}
-	.clearfix:after {
-	    display: table;
-	    content: "";
-	    line-height: 0;
-	    clear: both;
-	}
-	.arrow-l[data-state=hide], .arrow-r[data-state=hide] {
-		display: none;
-	}
-	.divider:after {
-		content: "";
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		right: 0;
-		width: 0;
-		height: 95%;
-    	margin: auto;
-		border-left: solid 1px #aaa;
-	}
-	.carousel {
-		position: relative;
-		width: 100%;
-		height: 300px;
-		padding: 0 10px;
-		border: solid 1px #aaa;
-		box-sizing: border-box;
-		overflow: hidden;
-	}
-	.carousel+div .dot {
-	    display: inline-block;
-	    width: 20px;
-	    height: 20px;
-        margin: 3px;
-	    background: #aaa;
-	    border-radius: 10px;
-	    cursor: pointer;
-	}
-	.carousel+div .dot[data-state=focus] {
-	    background: #0088ff;
-	}
-	.carousel .arrow-l {
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		left: 0;
-		width: 30px;
-		height: 80px;
-		margin: auto;
-		background: #aaa;
-	}
-	.carousel .arrow-r {
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		right: 0;
-		width: 30px;
-		height: 80px;
-		margin: auto;
-		background: #aaa;
-	}
-	.carousel-container {
-	    position: relative;
-		width: 100%;
-		height: 100%;
-		box-sizing: border-box;
-	}
 	.product-interest {
-		position: absolute;
+	    position: absolute;
 	    left: 0;
 	    top: 0;
-		box-sizing: border-box;
-		height: 300px;
-		width: 2400px;
-		transition: left 1s;
+	    box-sizing: border-box;
+	    height: 300px;
+	    width: 2400px;
+	    transition: left 1s;
 	}
 	.product-interest li {
-		position: relative;
-		float: left;
-		width: 240px;
-		height: 100%;
+	    position: relative;
+	    float: left;
+	    width: 240px;
+	    height: 100%;
 	}
 	.product-interest li a {
 		display: inline-block;
@@ -116,11 +37,14 @@
 	.product-interest p {
 	    margin: 0 30px;
         word-wrap: break-word;
+        margin: 0;
+    	padding: 0;
 	}
 	.product-interest .product-title {}
 	.product-interest .product-price {}
 	.product-interest .product-mall {}
 </style>
+<link rel="stylesheet" href="css/carousel.css">
 </head>
 <body>
     <div id="product-interest-carousel">
