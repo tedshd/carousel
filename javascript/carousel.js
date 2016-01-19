@@ -29,14 +29,14 @@
 			slideContent.style.left = '-' + w*option.viewCount*count + 'px';
 		}
 		function slideDot () {
-			document.querySelectorAll('.dot')[currentCount].setAttribute('data-state', '');
+			dom.querySelectorAll('.dot')[currentCount].setAttribute('data-state', '');
 			currentCount = parseInt(this.getAttribute('data-count'), 10);
-			document.querySelectorAll('.dot')[currentCount].setAttribute('data-state', 'focus');
+			dom.querySelectorAll('.dot')[currentCount].setAttribute('data-state', 'focus');
 			slide(currentCount);
 		}
 		function slideArrow () {
 			var arrow = this.getAttribute('class');
-			document.querySelectorAll('.dot')[currentCount].setAttribute('data-state', '');
+			dom.querySelectorAll('.dot')[currentCount].setAttribute('data-state', '');
 			if (arrow === 'arrow-l') {
 				if (currentCount !== 0) {
 					currentCount--;
@@ -46,7 +46,7 @@
 					currentCount++;
 				}
 			}
-			document.querySelectorAll('.dot')[currentCount].setAttribute('data-state', 'focus');
+			dom.querySelectorAll('.dot')[currentCount].setAttribute('data-state', 'focus');
 			slide(currentCount);
 		}
 		dot = Math.ceil(l / option.viewCount);
@@ -100,20 +100,20 @@
 		        if ( xDiff > 0 ) {
 		            /* left swipe */
 		            console.log('left swipe');
-		            document.querySelectorAll('.dot')[currentCount].setAttribute('data-state', '');
+		            dom.querySelectorAll('.dot')[currentCount].setAttribute('data-state', '');
 					if ((Math.ceil(l / option.viewCount) - 1) > currentCount) {
 						currentCount++;
 					}
-					document.querySelectorAll('.dot')[currentCount].setAttribute('data-state', 'focus');
+					dom.querySelectorAll('.dot')[currentCount].setAttribute('data-state', 'focus');
 					slide(currentCount);
 		        } else {
 		            /* right swipe */
 		            console.log('right swipe');
-		            document.querySelectorAll('.dot')[currentCount].setAttribute('data-state', '');
+		            dom.querySelectorAll('.dot')[currentCount].setAttribute('data-state', '');
 					if (currentCount !== 0) {
 						currentCount--;
 					}
-					document.querySelectorAll('.dot')[currentCount].setAttribute('data-state', 'focus');
+					dom.querySelectorAll('.dot')[currentCount].setAttribute('data-state', 'focus');
 					slide(currentCount);
 		        }
 		    } else {
