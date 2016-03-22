@@ -50,7 +50,7 @@
 			slide(currentCount);
 		}
 		dot = Math.ceil(l / option.viewCount);
-		dom.querySelectorAll('.product-interest')[0].style.width = w*l + 'px';
+		dom.querySelectorAll('ol')[0].style.width = w*l + 'px';
 		if (dot > 1) {
 			var arrowL = dom.querySelectorAll('.arrow-l')[0],
 				arrowR = dom.querySelectorAll('.arrow-r')[0];
