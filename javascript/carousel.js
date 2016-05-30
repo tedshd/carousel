@@ -51,9 +51,9 @@
 		}
 		dot = Math.ceil(l / option.viewCount);
 		dom.querySelectorAll('ul')[0].style.width = w*l + 'px';
+		var arrowL = dom.querySelectorAll('.arrow-l')[0],
+			arrowR = dom.querySelectorAll('.arrow-r')[0];
 		if (dot > 1) {
-			var arrowL = dom.querySelectorAll('.arrow-l')[0],
-				arrowR = dom.querySelectorAll('.arrow-r')[0];
 			arrowL.onclick = slideArrow;
 			arrowR.onclick = slideArrow;
 			arrowL.setAttribute('data-state', '');
@@ -72,6 +72,9 @@
 				dotDom.appendChild(span);
 			}
 			dom.appendChild(dotDom);
+		} else {
+			arrowL.setAttribute('data-state', 'hide');
+			arrowR.setAttribute('data-state', 'hide');
 		}
 
 		dom.addEventListener('touchstart', handleTouchStart, false);
@@ -86,7 +89,7 @@
 		}
 
 		function handleTouchMove(evt) {
-		    if ( ! xDown || ! yDown ) {
+		    if (!xDown || !yDown) {
 		        return;
 		    }
 
@@ -99,7 +102,7 @@
 		    if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
 		        if ( xDiff > 0 ) {
 		            /* left swipe */
-		            console.log('left swipe');
+		            // console.log('left swipe');
 		            dom.querySelectorAll('.dot')[currentCount].setAttribute('data-state', '');
 					if ((Math.ceil(l / option.viewCount) - 1) > currentCount) {
 						currentCount++;
@@ -108,7 +111,7 @@
 					slide(currentCount);
 		        } else {
 		            /* right swipe */
-		            console.log('right swipe');
+		            // console.log('right swipe');
 		            dom.querySelectorAll('.dot')[currentCount].setAttribute('data-state', '');
 					if (currentCount !== 0) {
 						currentCount--;
@@ -129,6 +132,14 @@
 		    xDown = null;
 		    yDown = null;
 		}
+		function reset() {
+			dom.removeEventListener('touchstart', handleTouchStart, false);
+			dom.removeEventListener('touchmove', handleTouchMove, false);
+			arrowL.setAttribute('data-state', 'hide');
+			arrowR.setAttribute('data-state', 'hide');
+			dom.getElementsByTagName('ul')[0].innerHTML = '';
+		}
+		this.reset = reset;
 	}
-	this.carousel = carousel;
+	window.carousel = carousel;
 })();
