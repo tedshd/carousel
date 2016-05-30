@@ -19,11 +19,17 @@
 			return;
 		}
 		var dot,
+			w,
+			l,
 			dom = option.dom,
 			items = dom.getElementsByTagName('li'),
-			w = items[0].clientWidth,
-			l = items.length,
 			currentCount = 0;
+		if (!items || items.length === 0) {
+			console.error('no content');
+			return;
+		}
+		w = items[0].clientWidth;
+		l = items.length;
 		function slide (count) {
 			var slideContent = dom.getElementsByTagName('ul')[0];
 			slideContent.style.left = '-' + w*option.viewCount*count + 'px';
@@ -53,6 +59,11 @@
 		dom.querySelectorAll('ul')[0].style.width = w*l + 'px';
 		var arrowL = dom.querySelectorAll('.arrow-l')[0],
 			arrowR = dom.querySelectorAll('.arrow-r')[0];
+		var dots = dom.querySelector('#carousel-dots');
+		if (dots) {
+			dots.outerHTML = '';
+			delete dots;
+		}
 		if (dot > 1) {
 			arrowL.onclick = slideArrow;
 			arrowR.onclick = slideArrow;
@@ -60,6 +71,7 @@
 			arrowR.setAttribute('data-state', '');
 
 			var dotDom = document.createElement('div');
+			dotDom.setAttribute('id', 'carousel-dots');
 			dotDom.setAttribute('style', 'text-align:center;');
 			for (var i = 0; i < dot; i++) {
 				var span = document.createElement('span');
@@ -133,6 +145,11 @@
 		    yDown = null;
 		}
 		function reset() {
+			var dots = dom.querySelector('#carousel-dots');
+			if (dots) {
+				dots.outerHTML = '';
+				delete dots;
+			}
 			dom.removeEventListener('touchstart', handleTouchStart, false);
 			dom.removeEventListener('touchmove', handleTouchMove, false);
 			arrowL.setAttribute('data-state', 'hide');

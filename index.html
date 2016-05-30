@@ -404,9 +404,19 @@
 </body>
 <script src="javascript/carousel.js"></script>
 <script>
-	var carousel = new carousel({
+	var carouselMod = new carousel({
 		dom: document.getElementById('product-interest-carousel'),
 		viewCount: 3
 	});
+	setTimeout(function () {
+		alert('Reset');
+		carouselMod.reset();
+		setTimeout(function () {
+			carouselMod = new carousel({
+				dom: document.getElementById('product-interest-carousel'),
+				viewCount: 3
+			});
+		}, 5000);
+	}, 5000);
 </script>
 </html>
