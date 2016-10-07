@@ -6,407 +6,78 @@
 <title>Carousel</title>
 <link href="" rel="stylesheet">
 <style>
-	.product-interest {
-	    position: absolute;
-	    left: 0;
-	    top: 0;
-	    box-sizing: border-box;
-	    height: 300px;
-	    width: 2400px;
-	    transition: left 1s;
+	ol, li {
+		margin:  0;
+		padding: 0;
 	}
-	.product-interest li {
+	#demo_1 {
+		height: 200px;
+	}
+	#demo_1 li {
 	    position: relative;
 	    float: left;
 	    width: 240px;
 	    height: 100%;
 	}
-	.product-interest li a {
+	#demo_1 li a {
 		display: inline-block;
 		padding: 10px 0;
 		width: 100%;
 		height: 100%;
 		box-sizing: border-box;
 	}
-	.product-interest .product-img {
+	#demo_1 .product-img {
 		display: block;
 		margin: 0 auto;
 		width: 180px;
 		height: 180px;
 	}
-	.product-interest p {
+	#demo_1 p {
 	    margin: 0 30px;
         word-wrap: break-word;
         margin: 0;
     	padding: 0;
 	}
-	.product-interest .product-title {}
-	.product-interest .product-price {}
-	.product-interest .product-mall {}
 </style>
 <link rel="stylesheet" href="css/carousel.css">
 </head>
 <body>
-    <div id="product-interest-carousel">
-    	<div class="carousel">
-	    	<div class="carousel-container">
-		    	<ul class="product-interest clearfix">
-		    		<li class="divider">
-		    			<a href="" target="_blank">
-			    			<img class="product-img" src="" alt="">
-			    			<p class="product-title">title</p>
-			    			<p class="product-price">1200</p>
-			    			<p class="product-mall">Yahoo</p>
-		    			</a>
-		    		</li>
-		    		<li class="divider">
-		    			<a href="" target="_blank">
-			    			<img class="product-img" src="" alt="">
-			    			<p class="product-title">long title haha this is test</p>
-			    			<p class="product-price">1200</p>
-			    			<p class="product-mall">Yahoo</p>
-		    			</a>
-		    		</li>
-		    		<li class="divider">
-		    			<a href="" target="_blank">
-			    			<img class="product-img" src="" alt="">
-			    			<p class="product-title">long title haha this is test</p>
-			    			<p class="product-price">1200</p>
-			    			<p class="product-mall">Yahoo</p>
-		    			</a>
-		    		</li>
-		    		<li class="divider">
-		    			<a href="" target="_blank">
-			    			<img class="product-img" src="" alt="">
-			    			<p class="product-title">long title haha this is test</p>
-			    			<p class="product-price">1200</p>
-			    			<p class="product-mall">Yahoo</p>
-		    			</a>
-		    		</li>
-		    		<li class="divider">
-		    			<a href="" target="_blank">
-			    			<img class="product-img" src="" alt="">
-			    			<p class="product-title">long title haha this is test</p>
-			    			<p class="product-price">1200</p>
-			    			<p class="product-mall">Yahoo</p>
-		    			</a>
-		    		</li>
-		    		<li class="divider">
-		    			<a href="" target="_blank">
-			    			<img class="product-img" src="" alt="">
-			    			<p class="product-title">long title haha this is test</p>
-			    			<p class="product-price">1200</p>
-			    			<p class="product-mall">Yahoo</p>
-		    			</a>
-		    		</li>
-		    		<li class="">
-		    			<a href="" target="_blank">
-			    			<img class="product-img" src="" alt="">
-			    			<p class="product-title">titletitletitletitletitletitletitle</p>
-			    			<p class="product-price">1200</p>
-			    			<p class="product-mall">Yahoo</p>
-		    			</a>
-		    		</li>
-		    		<li class="divider">
-		    			<a href="" target="_blank">
-			    			<img class="product-img" src="" alt="">
-			    			<p class="product-title">long title haha this is test</p>
-			    			<p class="product-price">1200</p>
-			    			<p class="product-mall">Yahoo</p>
-		    			</a>
-		    		</li>
-		    		<li class="divider">
-		    			<a href="" target="_blank">
-			    			<img class="product-img" src="" alt="">
-			    			<p class="product-title">long title haha this is test</p>
-			    			<p class="product-price">1200</p>
-			    			<p class="product-mall">Yahoo</p>
-		    			</a>
-		    		</li>
-		    		<li class="divider">
-		    			<a href="" target="_blank">
-			    			<img class="product-img" src="" alt="">
-			    			<p class="product-title">long title haha this is test</p>
-			    			<p class="product-price">1200</p>
-			    			<p class="product-mall">Yahoo</p>
-		    			</a>
-		    		</li>
-		    		<li class="">
-		    			<a href="" target="_blank">
-			    			<img class="product-img" src="" alt="">
-			    			<p class="product-title">titletitletitletitletitletitletitle</p>
-			    			<p class="product-price">1200</p>
-			    			<p class="product-mall">Yahoo</p>
-		    			</a>
-		    		</li>
-		    		<li class="divider">
-		    			<a href="" target="_blank">
-			    			<img class="product-img" src="" alt="">
-			    			<p class="product-title">long title haha this is test</p>
-			    			<p class="product-price">1200</p>
-			    			<p class="product-mall">Yahoo</p>
-		    			</a>
-		    		</li>
-		    		<li class="divider">
-		    			<a href="" target="_blank">
-			    			<img class="product-img" src="" alt="">
-			    			<p class="product-title">long title haha this is test</p>
-			    			<p class="product-price">1200</p>
-			    			<p class="product-mall">Yahoo</p>
-		    			</a>
-		    		</li>
-		    		<li class="divider">
-		    			<a href="" target="_blank">
-			    			<img class="product-img" src="" alt="">
-			    			<p class="product-title">long title haha this is test</p>
-			    			<p class="product-price">1200</p>
-			    			<p class="product-mall">Yahoo</p>
-		    			</a>
-		    		</li>
-		    		<li class="">
-		    			<a href="" target="_blank">
-			    			<img class="product-img" src="" alt="">
-			    			<p class="product-title">titletitletitletitletitletitletitle</p>
-			    			<p class="product-price">1200</p>
-			    			<p class="product-mall">Yahoo</p>
-		    			</a>
-		    		</li>
-		    		<li class="divider">
-		    			<a href="" target="_blank">
-			    			<img class="product-img" src="" alt="">
-			    			<p class="product-title">long title haha this is test</p>
-			    			<p class="product-price">1200</p>
-			    			<p class="product-mall">Yahoo</p>
-		    			</a>
-		    		</li>
-		    		<li class="divider">
-		    			<a href="" target="_blank">
-			    			<img class="product-img" src="" alt="">
-			    			<p class="product-title">long title haha this is test</p>
-			    			<p class="product-price">1200</p>
-			    			<p class="product-mall">Yahoo</p>
-		    			</a>
-		    		</li>
-		    		<li class="divider">
-		    			<a href="" target="_blank">
-			    			<img class="product-img" src="" alt="">
-			    			<p class="product-title">long title haha this is test</p>
-			    			<p class="product-price">1200</p>
-			    			<p class="product-mall">Yahoo</p>
-		    			</a>
-		    		</li>
-		    		<li class="">
-		    			<a href="" target="_blank">
-			    			<img class="product-img" src="" alt="">
-			    			<p class="product-title">titletitletitletitletitletitletitle</p>
-			    			<p class="product-price">1200</p>
-			    			<p class="product-mall">Yahoo</p>
-		    			</a>
-		    		</li>
-		    		<li class="divider">
-		    			<a href="" target="_blank">
-			    			<img class="product-img" src="" alt="">
-			    			<p class="product-title">long title haha this is test</p>
-			    			<p class="product-price">1200</p>
-			    			<p class="product-mall">Yahoo</p>
-		    			</a>
-		    		</li>
-		    		<li class="divider">
-		    			<a href="" target="_blank">
-			    			<img class="product-img" src="" alt="">
-			    			<p class="product-title">long title haha this is test</p>
-			    			<p class="product-price">1200</p>
-			    			<p class="product-mall">Yahoo</p>
-		    			</a>
-		    		</li>
-		    		<li class="divider">
-		    			<a href="" target="_blank">
-			    			<img class="product-img" src="" alt="">
-			    			<p class="product-title">long title haha this is test</p>
-			    			<p class="product-price">1200</p>
-			    			<p class="product-mall">Yahoo</p>
-		    			</a>
-		    		</li>
-		    		<li class="">
-		    			<a href="" target="_blank">
-			    			<img class="product-img" src="" alt="">
-			    			<p class="product-title">titletitletitletitletitletitletitle</p>
-			    			<p class="product-price">1200</p>
-			    			<p class="product-mall">Yahoo</p>
-		    			</a>
-		    		</li>
-		    		<li class="divider">
-		    			<a href="" target="_blank">
-			    			<img class="product-img" src="" alt="">
-			    			<p class="product-title">long title haha this is test</p>
-			    			<p class="product-price">1200</p>
-			    			<p class="product-mall">Yahoo</p>
-		    			</a>
-		    		</li>
-		    		<li class="divider">
-		    			<a href="" target="_blank">
-			    			<img class="product-img" src="" alt="">
-			    			<p class="product-title">long title haha this is test</p>
-			    			<p class="product-price">1200</p>
-			    			<p class="product-mall">Yahoo</p>
-		    			</a>
-		    		</li>
-		    		<li class="divider">
-		    			<a href="" target="_blank">
-			    			<img class="product-img" src="" alt="">
-			    			<p class="product-title">long title haha this is test</p>
-			    			<p class="product-price">1200</p>
-			    			<p class="product-mall">Yahoo</p>
-		    			</a>
-		    		</li>
-		    		<li class="">
-		    			<a href="" target="_blank">
-			    			<img class="product-img" src="" alt="">
-			    			<p class="product-title">titletitletitletitletitletitletitle</p>
-			    			<p class="product-price">1200</p>
-			    			<p class="product-mall">Yahoo</p>
-		    			</a>
-		    		</li>
-		    		<li class="divider">
-		    			<a href="" target="_blank">
-			    			<img class="product-img" src="" alt="">
-			    			<p class="product-title">long title haha this is test</p>
-			    			<p class="product-price">1200</p>
-			    			<p class="product-mall">Yahoo</p>
-		    			</a>
-		    		</li>
-		    		<li class="divider">
-		    			<a href="" target="_blank">
-			    			<img class="product-img" src="" alt="">
-			    			<p class="product-title">long title haha this is test</p>
-			    			<p class="product-price">1200</p>
-			    			<p class="product-mall">Yahoo</p>
-		    			</a>
-		    		</li>
-		    		<li class="divider">
-		    			<a href="" target="_blank">
-			    			<img class="product-img" src="" alt="">
-			    			<p class="product-title">long title haha this is test</p>
-			    			<p class="product-price">1200</p>
-			    			<p class="product-mall">Yahoo</p>
-		    			</a>
-		    		</li>
-		    		<li class="">
-		    			<a href="" target="_blank">
-			    			<img class="product-img" src="" alt="">
-			    			<p class="product-title">titletitletitletitletitletitletitle</p>
-			    			<p class="product-price">1200</p>
-			    			<p class="product-mall">Yahoo</p>
-		    			</a>
-		    		</li>
-		    		<li class="divider">
-		    			<a href="" target="_blank">
-			    			<img class="product-img" src="" alt="">
-			    			<p class="product-title">long title haha this is test</p>
-			    			<p class="product-price">1200</p>
-			    			<p class="product-mall">Yahoo</p>
-		    			</a>
-		    		</li>
-		    		<li class="divider">
-		    			<a href="" target="_blank">
-			    			<img class="product-img" src="" alt="">
-			    			<p class="product-title">long title haha this is test</p>
-			    			<p class="product-price">1200</p>
-			    			<p class="product-mall">Yahoo</p>
-		    			</a>
-		    		</li>
-		    		<li class="divider">
-		    			<a href="" target="_blank">
-			    			<img class="product-img" src="" alt="">
-			    			<p class="product-title">long title haha this is test</p>
-			    			<p class="product-price">1200</p>
-			    			<p class="product-mall">Yahoo</p>
-		    			</a>
-		    		</li>
-		    		<li class="">
-		    			<a href="" target="_blank">
-			    			<img class="product-img" src="" alt="">
-			    			<p class="product-title">titletitletitletitletitletitletitle</p>
-			    			<p class="product-price">1200</p>
-			    			<p class="product-mall">Yahoo</p>
-		    			</a>
-		    		</li>
-		    		<li class="divider">
-		    			<a href="" target="_blank">
-			    			<img class="product-img" src="" alt="">
-			    			<p class="product-title">long title haha this is test</p>
-			    			<p class="product-price">1200</p>
-			    			<p class="product-mall">Yahoo</p>
-		    			</a>
-		    		</li>
-		    		<li class="divider">
-		    			<a href="" target="_blank">
-			    			<img class="product-img" src="" alt="">
-			    			<p class="product-title">long title haha this is test</p>
-			    			<p class="product-price">1200</p>
-			    			<p class="product-mall">Yahoo</p>
-		    			</a>
-		    		</li>
-		    		<li class="divider">
-		    			<a href="" target="_blank">
-			    			<img class="product-img" src="" alt="">
-			    			<p class="product-title">long title haha this is test</p>
-			    			<p class="product-price">1200</p>
-			    			<p class="product-mall">Yahoo</p>
-		    			</a>
-		    		</li>
-		    		<li class="">
-		    			<a href="" target="_blank">
-			    			<img class="product-img" src="" alt="">
-			    			<p class="product-title">titletitletitletitletitletitletitle</p>
-			    			<p class="product-price">1200</p>
-			    			<p class="product-mall">Yahoo</p>
-		    			</a>
-		    		</li>
-		    		<li class="divider">
-		    			<a href="" target="_blank">
-			    			<img class="product-img" src="" alt="">
-			    			<p class="product-title">long title haha this is test</p>
-			    			<p class="product-price">1200</p>
-			    			<p class="product-mall">Yahoo</p>
-		    			</a>
-		    		</li>
-		    		<li class="divider">
-		    			<a href="" target="_blank">
-			    			<img class="product-img" src="" alt="">
-			    			<p class="product-title">long title haha this is test</p>
-			    			<p class="product-price">1200</p>
-			    			<p class="product-mall">Yahoo</p>
-		    			</a>
-		    		</li>
-		    		<li class="divider">
-		    			<a href="" target="_blank">
-			    			<img class="product-img" src="" alt="">
-			    			<p class="product-title">long title haha this is test</p>
-			    			<p class="product-price">1200</p>
-			    			<p class="product-mall">Yahoo</p>
-		    			</a>
-		    		</li>
-		    		<li class="">
-		    			<a href="" target="_blank">
-			    			<img class="product-img" src="" alt="">
-			    			<p class="product-title">titletitletitletitletitletitletitle</p>
-			    			<p class="product-price">1200</p>
-			    			<p class="product-mall">Yahoo</p>
-		    			</a>
-		    		</li>
-		    	</ul>
-	    	</div>
-	    	<div class="arrow-l" data-state="hide"></div>
-	    	<div class="arrow-r" data-state="hide"></div>
-    	</div>
+	<div id="demo_1" class="mod_carousel">
+        <div class="mod_carousel_container">
+            <ol>
+                <li class=""></li>
+            </ol>
+        </div>
+        <div class="mod_carousel_arrow_l" data-state="hide"></div>
+        <div class="mod_carousel_arrow_r" data-state="hide"></div>
     </div>
 </body>
 <script src="javascript/carousel.js"></script>
 <script>
-	var carousel = new carousel({
-		dom: document.getElementById('product-interest-carousel'),
+	for (var i = 0; i < 20; i++) {
+		var list = document.createElement('li');
+		list.innerHTML = '<a href="" target="_blank">' +
+			'<img src="" alt="">' +
+			'<p class="product-title">title</p>' +
+			'<p class="product-price">1200</p>' +
+			'<p class="product-mall">Yahoo</p>' +
+		'</a>';
+		document.querySelector('.mod_carousel_container ol').appendChild(list);
+	}
+
+	var carouselMod = new carousel({
+		dom: document.querySelector('.mod_carousel'),
 		viewCount: 3
 	});
+	// setTimeout(function () {
+	// 	console.log('Reset');
+	// 	carouselMod.reset();
+	// 	setTimeout(function () {
+	// 		carouselMod = new carousel({
+	// 			dom: document.querySelector('.mod_carousel'),
+	// 			viewCount: 3
+	// 		});
+	// 	}, 5000);
+	// }, 5000);
 </script>
 </html>
