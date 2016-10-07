@@ -6,6 +6,18 @@
  */
 
 /* mod carousel */
+:root {
+    --arrow-layout: {
+        z-index: 66;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 26px;
+        height: 62px;
+        margin: auto;
+        cursor: pointer;
+    };
+}
 
 .mod_carousel .mod_carousel_arrow_l[data-state=hide],
 .mod_carousel .mod_carousel_arrow_r[data-state=hide] {
@@ -27,26 +39,12 @@
     background: #4fb0df;
 }
 .mod_carousel .mod_carousel_arrow_l {
-    z-index: 66;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 26px;
-    height: 62px;
-    margin: auto;
-    cursor: pointer;
+    @apply --arrow-layout;
     left: 0;
     background: #aaa;
 }
 .mod_carousel .mod_carousel_arrow_r {
-    z-index: 66;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 26px;
-    height: 62px;
-    margin: auto;
-    cursor: pointer;
+    @apply --arrow-layout;
     right: 0;
     background: #aaa;
 }

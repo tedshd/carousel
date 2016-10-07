@@ -31,19 +31,19 @@
 		w = items[0].clientWidth;
 		l = items.length;
 		function slide (count) {
-			var slideContent = dom.getElementsByTagName('ul')[0];
+			var slideContent = dom.getElementsByTagName('ol')[0];
 			slideContent.style.left = '-' + w*option.viewCount*count + 'px';
 		}
 		function slideDot () {
-			dom.querySelectorAll('.dot')[currentCount].setAttribute('data-state', '');
+			dom.querySelectorAll('.mod_carousel_dot')[currentCount].setAttribute('data-state', '');
 			currentCount = parseInt(this.getAttribute('data-count'), 10);
-			dom.querySelectorAll('.dot')[currentCount].setAttribute('data-state', 'focus');
+			dom.querySelectorAll('.mod_carousel_dot')[currentCount].setAttribute('data-state', 'focus');
 			slide(currentCount);
 		}
 		function slideArrow () {
 			var arrow = this.getAttribute('class');
-			dom.querySelectorAll('.dot')[currentCount].setAttribute('data-state', '');
-			if (arrow === 'arrow-l') {
+			dom.querySelectorAll('.mod_carousel_dot')[currentCount].setAttribute('data-state', '');
+			if (arrow === 'mod_carousel_arrow_l') {
 				if (currentCount !== 0) {
 					currentCount--;
 				}
@@ -52,14 +52,14 @@
 					currentCount++;
 				}
 			}
-			dom.querySelectorAll('.dot')[currentCount].setAttribute('data-state', 'focus');
+			dom.querySelectorAll('.mod_carousel_dot')[currentCount].setAttribute('data-state', 'focus');
 			slide(currentCount);
 		}
 		dot = Math.ceil(l / option.viewCount);
-		dom.querySelectorAll('ul')[0].style.width = w*l + 'px';
-		var arrowL = dom.querySelectorAll('.arrow-l')[0],
-			arrowR = dom.querySelectorAll('.arrow-r')[0];
-		var dots = dom.querySelector('#carousel-dots');
+		dom.querySelectorAll('ol')[0].style.width = w*l + 'px';
+		var arrowL = dom.querySelectorAll('.mod_carousel_arrow_l')[0],
+			arrowR = dom.querySelectorAll('.mod_carousel_arrow_r')[0];
+		var dots = dom.querySelector('#mod_carousel_dots');
 		if (dots) {
 			dots.outerHTML = '';
 			delete dots;
@@ -71,14 +71,14 @@
 			arrowR.setAttribute('data-state', '');
 
 			var dotDom = document.createElement('div');
-			dotDom.setAttribute('id', 'carousel-dots');
+			dotDom.setAttribute('id', 'mod_carousel_dots');
 			dotDom.setAttribute('style', 'text-align:center;');
 			for (var i = 0; i < dot; i++) {
 				var span = document.createElement('span');
 				if (i === 0) {
 					span.setAttribute('data-state', 'focus');
 				}
-				span.setAttribute('class', 'dot');
+				span.setAttribute('class', 'mod_carousel_dot');
 				span.setAttribute('data-count', i);
 				span.onclick = slideDot;
 				dotDom.appendChild(span);
@@ -115,20 +115,20 @@
 		        if ( xDiff > 0 ) {
 		            /* left swipe */
 		            // console.log('left swipe');
-		            dom.querySelectorAll('.dot')[currentCount].setAttribute('data-state', '');
+		            dom.querySelectorAll('.mod_carousel_dot')[currentCount].setAttribute('data-state', '');
 					if ((Math.ceil(l / option.viewCount) - 1) > currentCount) {
 						currentCount++;
 					}
-					dom.querySelectorAll('.dot')[currentCount].setAttribute('data-state', 'focus');
+					dom.querySelectorAll('.mod_carousel_dot')[currentCount].setAttribute('data-state', 'focus');
 					slide(currentCount);
 		        } else {
 		            /* right swipe */
 		            // console.log('right swipe');
-		            dom.querySelectorAll('.dot')[currentCount].setAttribute('data-state', '');
+		            dom.querySelectorAll('.mod_carousel_dot')[currentCount].setAttribute('data-state', '');
 					if (currentCount !== 0) {
 						currentCount--;
 					}
-					dom.querySelectorAll('.dot')[currentCount].setAttribute('data-state', 'focus');
+					dom.querySelectorAll('.mod_carousel_dot')[currentCount].setAttribute('data-state', 'focus');
 					slide(currentCount);
 		        }
 		    } else {
@@ -145,7 +145,7 @@
 		    yDown = null;
 		}
 		function reset() {
-			var dots = dom.querySelector('#carousel-dots');
+			var dots = dom.querySelector('#mod_carousel_dots');
 			if (dots) {
 				dots.outerHTML = '';
 				delete dots;
@@ -154,7 +154,7 @@
 			dom.removeEventListener('touchmove', handleTouchMove, false);
 			arrowL.setAttribute('data-state', 'hide');
 			arrowR.setAttribute('data-state', 'hide');
-			dom.getElementsByTagName('ul')[0].innerHTML = '';
+			dom.getElementsByTagName('ol')[0].innerHTML = '';
 		}
 		this.reset = reset;
 	}
