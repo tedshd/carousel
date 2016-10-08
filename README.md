@@ -14,65 +14,30 @@ Dot on bottom is auto render in js.
 
 ```javascript
 var carousel = new carousel({
-    dom: document.getElementById('product-interest-carousel'),
+    dom: document.getElementById('demo_1'),
     viewCount: 3
 });
 ```
 
+* dom - html dom element
+* viewCount - the li count want to show on view, and slide this count
+
 ### HTML
 
 ```html
-<div id="product-interest-carousel">
-    <div class="carousel">
-        <div class="carousel-container">
-            <ul class="product-interest clearfix">
-                <li class="divider">
-                    <a href="" target="_blank">
-                        <img class="product-img" src="" alt="">
-                        <p class="product-title">title</p>
-                        <p class="product-price">1200</p>
-                        <p class="product-mall">Yahoo</p>
-                    </a>
-                </li>
-                <li class="divider">
-                    <a href="" target="_blank">
-                        <img class="product-img" src="" alt="">
-                        <p class="product-title">long title haha this is test</p>
-                        <p class="product-price">1200</p>
-                        <p class="product-mall">Yahoo</p>
-                    </a>
-                </li>
-                <li class="divider">
-                    <a href="" target="_blank">
-                        <img class="product-img" src="" alt="">
-                        <p class="product-title">long title haha this is test</p>
-                        <p class="product-price">1200</p>
-                        <p class="product-mall">Yahoo</p>
-                    </a>
-                </li>
-                <li class="divider">
-                    <a href="" target="_blank">
-                        <img class="product-img" src="" alt="">
-                        <p class="product-title">long title haha this is test</p>
-                        <p class="product-price">1200</p>
-                        <p class="product-mall">Yahoo</p>
-                    </a>
-                </li>
-                <li class="">
-                    <a href="" target="_blank">
-                        <img class="product-img" src="" alt="">
-                        <p class="product-title">long title haha this is test</p>
-                        <p class="product-price">1200</p>
-                        <p class="product-mall">Yahoo</p>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div class="arrow-l" data-state="hide"></div>
-        <div class="arrow-r" data-state="hide"></div>
+
+<!-- id is not require -->
+
+<div id="demo_1" class="mod_carousel">
+    <div class="mod_carousel_container">
+        <ol>
+            <li class="">content</li>
+            <li class="">content</li>
+            <li class="">content</li>
+        </ol>
     </div>
+    <div class="mod_carousel_arrow_l" data-state="hide"></div>
+    <div class="mod_carousel_arrow_r" data-state="hide"></div>
 </div>
 ```
 
-* dom - html dom element
-* viewCount - the li count want to show on view, and slide this count
